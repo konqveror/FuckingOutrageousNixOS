@@ -39,6 +39,17 @@
        libarchive
        qemu_kvm
        doas
+       imagemagick
+       virt-manager
+       virt-viewer
+       spice
+       spice-gtk
+       spice-protocol
+       virtio-win
+       win-spice
+       qbittorrent
+       smartmontools
+       hdparm
      ];
 }
 

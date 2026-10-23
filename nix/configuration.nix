@@ -13,6 +13,11 @@
       ./fonts.nix
       ./rc.1/doas
       ./rc.4/settings
+      ./virtualmachine.nix
+      ./disks.nix
+      ./rc.5/x.nix
+      ./rc.5/sound.nix
+      ./rc.1/suid.nix
     ];
 
   boot.kernelModules = [ "kvm-amd" ];
@@ -22,12 +27,6 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.loader.grub.configurationLimit = 3;
 
-  security.wrappers.brightnessctl = {
-	source = "${pkgs.brightnessctl}/bin/brightnessctl";
-	setuid = true;
-	owner = "root";
-	group = "root";
-};
   networking.hostName = "puellamagi"; 
   networking.networkmanager.enable = true;
 
@@ -35,35 +34,9 @@
 
   i18n.defaultLocale = "en_CA.UTF-8";
 
-  services.xserver = {
-    enable = true;
-    desktopManager.xfce.enable = true;
-    displayManager.lightdm.enable = true;
-};
-   services.logind.settings.Login = {
-     HandleLidSwitch = "suspend";
-     HandleLidSwitchExternalPower = "suspend";
-}; 
-
-
-   services.pipewire = {
-     enable = true;
-     pulse.enable = true;
-     alsa.enable = true;
-     alsa.support32Bit = true;
-     extraConfig.pipewire."99-quantum" = {
-       "context.properties" = {
-	 "default.clock.rate" = 48000;
-         "default.clock.quantum" = 2048;
-         "default.clock.min-quantum" = 2048;
-         "default.clock.max-quantum" = 2048;
-	};
-   };
-};
-
   users.users.momoko = {
      isNormalUser = true;
-     extraGroups = [ "wheel" "audio" "video" "networkmanager" "input" "kvm"]; # Enable ‘sudo’ for the user.
+     extraGroups = [ "wheel" "audio" "video" "networkmanager" "input" "kvm" "libvirtd" ]; # Enable ‘sudo’ for the user.
      initialPassword = "";
    };
 
@@ -73,7 +46,6 @@ nixpkgs.config = {
     allowUnfree = true;
 };
 
-  programs.firefox.enable = true;
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
@@ -101,7 +73,6 @@ systemd.services.ModemManager.enable = false;
 
 environment.systemPackages = with pkgs; [
   wineWow64Packages.full
-  steam-run
 ];
 
 
@@ -109,7 +80,7 @@ environment.systemPackages = with pkgs; [
 
   networking.firewall.allowedTCPPorts = [ 8000 2121 67 ];
   # networking.firewall.allowedUDPPorts = [ ... ];
-  #networking.firewall.enable = false;
+  # networking.firewall.enable = false;
   
  system.stateVersion = "26.05";  
  
