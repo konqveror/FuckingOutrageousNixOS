@@ -44,3 +44,4 @@ Shell: KornShell93
 	⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠿⠃
 
 
+<img width="1366" height="768" alt="bigshot" src="https://github.com/user-attachments/assets/cb8739db-6c93-4d1f-bb76-1df94c1c56b2" />
