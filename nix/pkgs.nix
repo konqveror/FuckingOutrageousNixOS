@@ -1,0 +1,44 @@
+{ pkgs, ... }:
+
+{
+  users.users.momoko.packages = with pkgs; [
+       git
+       ksh
+       vim
+       tree
+       htop
+       fastfetch
+       python3
+       brightnessctl
+       ufetch
+       playerctl
+       kdePackages.juk
+       nicotine-plus
+       alsa-utils
+       abaddon
+       retroarch
+       kdePackages.konqueror
+       kdePackages.falkon
+       python314Packages.uploadserver
+       vlc
+       unstable.seamonkey
+       kdePackages.dolphin
+       kdePackages.kio-extras
+       kdePackages.kdegraphics-thumbnailers
+       gimp2
+       renoise
+       courier-prime
+       cava
+       btop
+       mpv
+       libnotify
+       pt2-clone
+       pfetch-rs
+       pragha
+       lm_sensors
+       libarchive
+       qemu_kvm
+       doas
+     ];
+}
+

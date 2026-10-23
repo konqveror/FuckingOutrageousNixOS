@@ -1,0 +1,20 @@
+{ config, pkgs, ... }:
+
+{ 
+  nix = {
+    settings = {
+      experimental-features = [ "nix-command" "flakes" ];
+       warn-dirty = false;
+       auto-optimise-store = true;
+       cores = 1;
+       max-jobs = 1;
+};
+
+   gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 7d";
+   };
+ };
+}
+

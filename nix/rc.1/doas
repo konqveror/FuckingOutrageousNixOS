@@ -1,0 +1,12 @@
+{ config, pkgs, ...}:
+
+{
+  security.doas = {
+   enable = true;
+   extraRules = [{
+     users = ["momoko"];
+     persist = true;
+     keepEnv = true;
+  }];
+ };
+}
