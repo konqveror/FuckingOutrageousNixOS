@@ -1,9 +1,7 @@
 # NixOS Files.
 
 ![NixOS](https://img.shields.io/badge/NixOS-5277C3?logo=nixos&logoColor=white)
-![Home Manager](https://img.shields.io/badge/Home%20Manager-blue?logo=homeadvisor&logoColor=white)
-
-![Flakes](https://img.shields.io/badge/Flakes-5E81AC?logo=nixos&logoColor=white)
+![Home Manager](https://img.shields.io/badge/Home%20Manager-blue?logo=homeadvisor&logoColor=white) ![Flakes](https://img.shields.io/badge/Flakes-5E81AC?logo=nixos&logoColor=white)
 
 ### Minimal and reproducible configuration for NixOS (Flakes, Home Manager and extras)
 
