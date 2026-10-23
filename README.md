@@ -27,8 +27,10 @@ Shell: KornShell93
 │   └── rc.4
 │       ├── customs
 │       └── settings
-└── README.md```
+└── README.md
+```
 
+### That's all.
 
 	 ⢠⣶⣤⣄⢠⣦⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣦⢀⣤⣴⣦
 	 ⠀⠉⠛⠿⠷⣯⣿⣿⣶⡀⠀⢀⣠⣤⣀⠀⠀⣠⣾⣿⣫⡷⠿⠿⠋⠁
