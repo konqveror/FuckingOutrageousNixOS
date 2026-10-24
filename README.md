@@ -17,20 +17,30 @@ Shell: KornShell93
 # Struct:
 
 ```FuckingOutrageousNixOS
-├── nix
-│   ├── configuration.nix
-│   ├── flake.lock
-│   ├── flake.nix
-│   ├── fonts.nix
-│   ├── hardware-configuration.nix
-│   ├── home.nix
-│   ├── pkgs.nix
-│   ├── rc.1
-│   │   └── doas
-│   └── rc.4
-│       ├── customs
-│       └── settings
-└── README.md
+├── configuration.nix
+├── disks.nix
+├── flake.lock
+├── flake.nix
+├── fonts.nix
+├── hardware-configuration.nix
+├── home.nix
+├── networking-shenanigans.nix
+├── pkgs.nix
+├── rc.1
+│   ├── doas
+│   └── suid.nix
+├── rc.3
+│   ├── general-services.nix
+│   └── zram.nix
+├── rc.4
+│   ├── customs
+│   ├── hometown.nix
+│   └── settings
+├── rc.5
+│   ├── sound.nix
+│   └── x.nix
+├── ring0.nix
+└── virtualmachine.nix
 ```
 
 ### That's all.
