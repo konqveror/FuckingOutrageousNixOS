@@ -50,6 +50,7 @@
        qbittorrent
        smartmontools
        hdparm
+       ffmpeg
      ];
 }
 
